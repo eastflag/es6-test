@@ -1,7 +1,5 @@
 import {Observable} from "rxjs/Observable";
 
-
-
 let stream1$ = new Observable(observer => {
     setTimeout(()=> {
         observer.next('observable timeout');
