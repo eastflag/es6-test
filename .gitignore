@@ -1,3 +1,9 @@
 /dist
 /node_modules
 /.idea
+
+/src/**/*.js
+/src/**/*.map
+
+/sample/**/*.js
+/sample/**/*.map

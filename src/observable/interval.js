@@ -1,16 +1,15 @@
-import {Observable} from "rxjs";
-
-let stream1$ = new Observable(observer => {
-    let count = 0;
-    let timeout = setInterval(() => {
+"use strict";
+var rxjs_1 = require("rxjs");
+var stream1$ = new rxjs_1.Observable(function (observer) {
+    var count = 0;
+    var timeout = setInterval(function () {
         ++count;
         observer.next(count);
     }, 1000);
-
-    return () => {
+    return function () {
         clearTimeout(timeout);
-    }
+    };
 });
-
-let disposable =stream1$.subscribe(value => console.log(value));
-setTimeout(()=>disposable.unsubscribe(), 5000);
+var disposable = stream1$.subscribe(function (value) { return console.log(value); });
+setTimeout(function () { return disposable.unsubscribe(); }, 5000);
+//# sourceMappingURL=interval.js.map
