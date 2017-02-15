@@ -24,3 +24,10 @@ es6: ''
 tsc hello-world.ts
 자동화
 settings -> typescript에 compiler 체크, tsconfig.json 추가
+
+* typescript tutorial
+https://www.typescriptlang.org
+
+* es6 tutorial
+http://ccoenraets.github.io/es6-tutorial/
+https://babeljs.io/learn-es2015/#ecmascript-2015-features-classes
