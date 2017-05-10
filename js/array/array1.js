@@ -34,15 +34,45 @@ console.log(books);
 books.splice(2, 1);
 console.log(books);
 
+console.log('forEach function-------------------------------------------------------------------');
+// 원본 배열에서 자바의 정석을 찾아서 저자를 남궁성으로 바꾸시오
+books.forEach(function(item) {
+    if(item.title === '자바의정석') {
+        item.author = '남궁성';
+    }
+});
+console.log(books);
+
 //책의 총 비용을 출력하시오
-console.log('map function-------------------------------------------------------------------');
+console.log('forEach 와 map의 차이점: map은 새로운 배열을 리턴한다.-----------------------------------------------');
 var sum = 0;
-books.map(function (item) {
+books.forEach(function (item) {
   sum += item.price;
 });
-console.log('sum:' + sum);
+console.log('forEach sum:' + sum);
 
-//자바의 정석을 찾아서 저자를 남궁성으로 바구시오
+console.log('map function-------------------------------------------------------------------');
+//새로운 배열을 만들되 판매순위가 3등안에 드는 경우에 제목앞에 등수를 붙인다.
+//print) 콩쥐팥쥐 흥부놀부 자바의정석
+var newMap = books.map(function (item) {
+    if(item.order <= 3) {
+        item.title = item.order + '등 ' + item.title;
+        return item;
+    } else {
+        return item;
+    }
+});
+console.log(newMap);
+
+console.log('filter function-------------------------------------------------------------------');
+//새로운 배열을 만들되 3등안에 있는것만 따로 만든다.
+var newFilter = books.filter(function (item) {
+    if(item.order <= 3) {
+        return true;
+    }
+});
+console.log(newFilter);
+
 
 
 /*var a = fruits.pop();
