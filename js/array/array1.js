@@ -73,8 +73,6 @@ var newFilter = books.filter(function (item) {
 });
 console.log(newFilter);
 
-
-
 /*var a = fruits.pop();
 console.log(a);
 //Mango
